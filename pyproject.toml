@@ -1,0 +1,42 @@
+[project]
+name = "langchain-in-way"
+# 注意：项目名称使用连字符，但包名可以使用下划线
+version = "1.0.0"
+description = "基于LangChain和LangGraph的流式Agent，用于生成题目"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "langchain>=0.1.0",
+    "langgraph>=0.0.20",
+    "langchain-openai>=0.0.5",
+    "fastapi>=0.104.0",
+    "uvicorn[standard]>=0.24.0",
+    "python-dotenv>=1.0.0",
+    "pydantic>=2.0.0",
+    "requests>=2.31.0",
+]
+
+[project.optional-dependencies]
+dev = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+# 对于应用项目，明确指定要包含的文件
+# 由于文件在根目录，使用 only-include 明确指定
+only-include = [
+    "__init__.py",
+    "agent.py",
+    "api.py",
+    "config.py",
+    "session_manager.py",
+]
+
+[tool.uv]
+dev-dependencies = []
+
+[tool.uv.sources]
+# 如果需要指定特定包的源，可以在这里配置
+

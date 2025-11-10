@@ -1,0 +1,14 @@
+# uv 配置文件
+# 配置 pip 镜像源（用于加速下载）
+
+# 使用清华镜像（推荐）
+index-url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+
+# 或者使用其他镜像源：
+# 阿里云镜像: https://mirrors.aliyun.com/pypi/simple/
+# 中科大镜像: https://pypi.mirrors.ustc.edu.cn/simple/
+# 豆瓣镜像: https://pypi.douban.com/simple/
+
+# 信任的额外主机（如果需要）
+# extra-index-url = []
+
